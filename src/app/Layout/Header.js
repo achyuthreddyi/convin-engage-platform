@@ -26,10 +26,10 @@ export default function Header() {
         <div className="flex items-center">
           <div className="flex items-center">
             <div className="w-7 h-7 rounded-full bg-gray-100 flex items-center justify-center">
-              <span className="text-[13px] text-gray-600">NM</span>
+              <span className="text-[13px] text-gray-600">AR</span>
             </div>
             <span className="ml-2 text-[14px] text-gray-600 font-normal">
-              Narendra Modi
+              Achyuth Reddy
             </span>
           </div>
           <svg 
