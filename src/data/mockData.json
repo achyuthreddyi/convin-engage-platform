@@ -1,0 +1,83 @@
+{
+    "segments": [
+      {
+        "id": 1,
+        "name": "Mentioning Competitor",
+        "description": "Users who mentioned our competitors",
+        "count": 850,
+        "criteria": [
+          { "type": "Sentiment", "value": "Neutral" },
+          { "type": "Keywords", "value": "competitor names" }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Expressing Dissatisfaction",
+        "description": "Users expressing negative sentiment",
+        "count": 320,
+        "criteria": [
+          { "type": "Sentiment", "value": "Negative" }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "High-Value Customers",
+        "description": "Customers with high lifetime value",
+        "count": 650,
+        "criteria": [
+          { "type": "Purchase Value", "value": "> ₹75000" }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Churning Risk",
+        "description": "Users showing signs of affecting brand value",
+        "count": 245,
+        "criteria": [
+          { "type": "Activity", "value": "Declining" }
+        ]
+      }
+    ],
+    "campaigns": [
+      {
+        "id": 1,
+        "name": "Summer Sale Campaign",
+        "status": "Active",
+        "segment": "Price-Sensitive Users",
+        "channel": "Email, SMS",
+        "created": "2024-03-15",
+        "targetSegments": [1, 2],
+        "reachCount": 1170
+      },
+      {
+        "id": 2,
+        "name": "Product Launch",
+        "status": "Scheduled",
+        "segment": "High-Value Customers",
+        "channel": "WhatsApp",
+        "created": "2024-03-14",
+        "targetSegments": [3],
+        "reachCount": 650
+      },
+      {
+        "id": 3,
+        "name": "Brand Recovery",
+        "status": "Draft",
+        "segment": "Churning Risk",
+        "channel": "AI Phone Call",
+        "created": "2024-03-13",
+        "targetSegments": [4],
+        "reachCount": 245
+      },
+      {
+        "id": 4,
+        "name": "Competitor Analysis",
+        "status": "Active",
+        "segment": "Mentioning Competitor",
+        "channel": "Email",
+        "created": "2024-03-12",
+        "targetSegments": [1],
+        "reachCount": 850
+      }
+    ]
+  } 
