@@ -4,6 +4,7 @@ import Navigation from './Layout/Navigation';
 import Building from './components/Building';
 import CampaignList from './components/CampaignList';
 import Dashboard from './components/Dashboard';
+import SegmentList from './components/SegmentList';
 
 export default function Home() {
   const [currentView, setCurrentView] = useState('dashboard');
@@ -18,6 +19,8 @@ export default function Home() {
         return <Dashboard />;
       case 'campaigns':
         return <CampaignList />;
+      case 'segments':
+        return <SegmentList />;
       default:
         return <Building />;
     }
