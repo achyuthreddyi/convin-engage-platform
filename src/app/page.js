@@ -1,19 +1,15 @@
 'use client';
 import { useState } from 'react';
 import Navigation from './Layout/Navigation';
-import Building from './components/Building';
-import CampaignList from './components/CampaignList';
 import Dashboard from './components/Dashboard';
-import SegmentList from './components/SegmentList';
+import CampaignList from './components/CampaignList';
 import CreateTemplate from './components/CreateTemplate';
 import TemplateList from './components/TemplateList';
+import SegmentList from './components/SegmentList';
+import CreateSegment from './components/CreateSegment';
 
 export default function Home() {
-  const [currentView, setCurrentView] = useState('dashboard');
-
-  const handleNavigation = (view) => {
-    setCurrentView(view);
-  };
+  const [currentView, setCurrentView] = useState('campaigns');
 
   const renderContent = () => {
     switch (currentView) {
@@ -23,20 +19,22 @@ export default function Home() {
         return <CampaignList />;
       case 'segments':
         return <SegmentList />;
-      case 'createTemplate':
-        return <CreateTemplate />;
+      case 'createSegment':
+        return <CreateSegment />;
       case 'templates':
         return <TemplateList />;
+      case 'createTemplate':
+        return <CreateTemplate />;
       default:
-        return <Building />;
+        return <CampaignList />;
     }
   };
 
   return (
-    <main className="flex">
-      <Navigation onNavigate={handleNavigation} />
-      <div className="flex-1">
-        {renderContent()}
+    <main className="min-h-screen bg-gray-50">
+      <div className="flex">
+        <Navigation onNavigate={setCurrentView} />
+        <div className="flex-1 p-8">{renderContent()}</div>
       </div>
     </main>
   );
