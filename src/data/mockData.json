@@ -79,5 +79,72 @@
         "targetSegments": [1],
         "reachCount": 850
       }
+    ],
+    "templates": [
+      {
+        "id": 1,
+        "name": "Welcome Email",
+        "channel": "email",
+        "subject": "Welcome to Our Platform!",
+        "message": "Hi {{customer_name}},\n\nWelcome to {{company_name}}! We're excited to have you on board.\n\nBest regards,\nThe Team",
+        "createdAt": "2024-03-10",
+        "lastUsed": "2024-03-15",
+        "usageCount": 450,
+        "usedInCampaigns": [
+          {
+            "id": 1,
+            "name": "Summer Sale Campaign"
+          },
+          {
+            "id": 4,
+            "name": "Competitor Analysis"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Payment Reminder",
+        "channel": "whatsapp",
+        "message": "Hello {{customer_name}}, this is a reminder that your payment for {{company_name}} services is due. Please complete the payment to avoid service interruption.",
+        "createdAt": "2024-03-08",
+        "lastUsed": "2024-03-16",
+        "usageCount": 890,
+        "usedInCampaigns": [
+          {
+            "id": 2,
+            "name": "Product Launch"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Service Update",
+        "channel": "sms",
+        "message": "{{customer_name}}, your service request at {{company_name}} has been updated. Check your email for details.",
+        "createdAt": "2024-03-05",
+        "lastUsed": "2024-03-14",
+        "usageCount": 1200,
+        "usedInCampaigns": [
+          {
+            "id": 1,
+            "name": "Summer Sale Campaign"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Feedback Call",
+        "channel": "voicebot",
+        "message": "Hello {{customer_name}}, this is {{company_name}}. We'd love to hear about your recent experience with our service.",
+        "createdAt": "2024-03-01",
+        "lastUsed": "2024-03-13",
+        "usageCount": 320,
+        "usedInCampaigns": [
+          {
+            "id": 3,
+            "name": "Brand Recovery"
+          }
+        ]
+      }
     ]
   } 

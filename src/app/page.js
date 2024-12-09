@@ -5,6 +5,8 @@ import Building from './components/Building';
 import CampaignList from './components/CampaignList';
 import Dashboard from './components/Dashboard';
 import SegmentList from './components/SegmentList';
+import CreateTemplate from './components/CreateTemplate';
+import TemplateList from './components/TemplateList';
 
 export default function Home() {
   const [currentView, setCurrentView] = useState('dashboard');
@@ -21,6 +23,10 @@ export default function Home() {
         return <CampaignList />;
       case 'segments':
         return <SegmentList />;
+      case 'createTemplate':
+        return <CreateTemplate />;
+      case 'templates':
+        return <TemplateList />;
       default:
         return <Building />;
     }
